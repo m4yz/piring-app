@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+
+:root {
+  --paper: #f7f3ec;
+  --ink: #1e1a17;
+  --muted: #6f665e;
+  --line: #e4dccf;
+  --tomato: #b4372b;
+  --serif: "DM Serif Display", Georgia, serif;
+  --sans: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #181412;
+    --ink: #f5efe6;
+    --muted: #b3a89c;
+    --line: #3a312b;
+    --tomato: #e8735c;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.65 var(--sans);
+}
+main, header, footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left));
+  padding-right: max(20px, env(safe-area-inset-right));
+}
+header { padding-block: 48px 8px; display: flex; gap: 20px; align-items: center; }
+header img { width: 84px; height: 84px; border-radius: 20px; }
+.word { font: italic 400 56px/1 var(--serif); margin: 0; }
+.word span { color: var(--tomato); font-style: normal; }
+.tag { margin: 6px 0 0; color: var(--muted); }
+h2 { font: 400 30px/1.2 var(--serif); margin: 40px 0 10px; }
+h3 { font: 700 15px/1.4 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--tomato); margin: 28px 0 6px; }
+p, li { max-width: 64ch; }
+a { color: var(--tomato); }
+.plate { width: min(260px, 70%); display: block; margin: 24px auto 8px; }
+ul { padding-left: 20px; }
+li + li { margin-top: 6px; }
+.note { color: var(--muted); font-size: 15px; }
+footer { padding-block: 40px 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); margin-top: 48px; }
+nav a { margin-right: 16px; }
